@@ -1,0 +1,27 @@
+:root {
+  --main-background-black: #000000;
+  --main-text-black: #000000;
+  --switch-backround-black: #000000;
+  --switch-black: #000000;
+
+  --main-background-white: #ffffff;
+  --main-text-white: #ffffff;
+  --switch-backround-white: #ffffff;
+  --switch-white: #ffffff;
+
+  --font-familly-base: "Mozilla Headline", sans-serif;
+}
+
+[data-theme="light"] {
+  --main-background-color: var(--main-background-white);
+  --main-text-color: var(--main-text-black);
+  --switch-color: var(--switch-black);
+  --switch-background-color: var(--switch-background-white);
+}
+
+[data-theme="dark"] {
+  --main-background-color: var(--main-background-black);
+  --main-text-color: var(--main-text-white);
+  --switch-color: var(--switch-white);
+  --switch-background-color: var(--switch-background-dark);
+}

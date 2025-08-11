@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 100px 20px 100px;
+  width: auto;
+
+  @media (max-width: 445px) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 550;
+  }
+
+  .switch {
+    margin: 0;
+  }
+}
