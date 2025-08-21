@@ -1,13 +1,25 @@
 :root {
-  --main-background-black: #000000;
+  --main-background-black: #1f1f1f;
   --main-text-black: #000000;
-  --switch-backround-black: #000000;
   --switch-black: #000000;
+  --switch-icon-black: #000000;
+  --switch-background-black: #000000;
+  // --textField-backround-black: #000000;
+  --textField-color-black: #000000;
+  --addButton-background-black: #000000;
+  --addButton-color-black: #000000;
+  --filterBorder-color-black: #000000;
 
   --main-background-white: #ffffff;
   --main-text-white: #ffffff;
-  --switch-backround-white: #ffffff;
   --switch-white: #ffffff;
+  --switch-icon-white: #ffffff;
+  --switch-background-white: #ffffff;
+  --textField-backround-white: #ffffff;
+  --textField-color-white: #ffffff;
+  --addButton-background-white: #ffffff;
+  --addButton-color-white: #ffffff;
+  --filterBorder-color-white: #ffffff;
 
   --font-familly-base: "Mozilla Headline", sans-serif;
 }
@@ -17,11 +29,23 @@
   --main-text-color: var(--main-text-black);
   --switch-color: var(--switch-black);
   --switch-background-color: var(--switch-background-white);
+  --switch-icon-color: var(--switch-icon-white);
+  // --textField-backround-color: var(--textField-backround-black);
+  // --textField-color: var(--textField-color-white);
+  --addButton-background-color: var(--addButton-background-black);
+  --addButton-color: var(--addButton-color-white);
+  --filterBoeder-color: var(--filterBorder-color-black);
 }
 
 [data-theme="dark"] {
   --main-background-color: var(--main-background-black);
   --main-text-color: var(--main-text-white);
   --switch-color: var(--switch-white);
-  --switch-background-color: var(--switch-background-dark);
+  --switch-background-color: var(--switch-background-black);
+  --switch-icon-color: var(--switch-icon-black);
+  --textField-backround-color: var(--textField-backround-white);
+  --textField-color: var(--textField-color-black);
+  --addButton-background-color: var(--addButton-background-white);
+  --addButton-color: var(--addButton-color-black);
+  --filterBoeder-color: var(--filterBorder-color-white);
 }

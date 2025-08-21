@@ -1,0 +1,150 @@
+.filtersContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  @media (max-width: 768px) {
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+  @media (max-width: 445px) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.searchPaper {
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: none !important;
+  border: 1px solid #e0e0e0;
+
+  &:hover {
+    border-color: #000000;
+  }
+
+  &:focus-within {
+    border-color: #000000;
+    outline: none;
+  }
+}
+
+.searchIcon {
+  padding: 10px;
+  color: #666;
+}
+
+.searchInput {
+  margin-left: 8px;
+  flex: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.autocomplete {
+  width: 300px;
+
+  @media (max-width: 1132px) {
+    width: 150px;
+  }
+  @media (max-width: 445px) {
+    width: 200px;
+  }
+
+  .textField {
+    background-color: var(--textField-backround-color);
+    color: var(--textField-color);
+
+    border-radius: 4px;
+
+    .MuiOutlinedInput-root {
+      &.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: #000000 !important;
+        }
+      }
+
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: #000000;
+      }
+    }
+
+    .MuiInputLabel-root {
+      &.Mui-focused {
+        color: #000000 !important;
+      }
+    }
+
+    &:hover {
+      color: #000000;
+    }
+    &:active {
+      color: #000000;
+    }
+  }
+}
+
+.newTaskButton {
+  margin: 20px 100px 0 !important;
+  font-weight: 500;
+  width: 150px;
+  background-color: var(--addButton-background-color) !important;
+  color: var(--addButton-color) !important;
+
+  &.MuiButton-root {
+    &:focus {
+      outline: none;
+      background-color: var(--addButton-background-color) !important;
+    }
+
+    &:active {
+      background-color: var(--addButton-background-color) !important;
+      filter: brightness(0.9);
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 55px !important;
+  }
+  @media (max-width: 445px) {
+    margin-left: 30px !important;
+  }
+
+  .newTaskButton-text {
+    font-weight: 600;
+  }
+}
+
+.Mui-focused {
+  outline: none !important;
+
+  &.MuiIconButton-root {
+    background-color: transparent !important;
+  }
+}
+
+.MuiAutocomplete-popper {
+  .MuiAutocomplete-option {
+    &.Mui-focused {
+      background-color: #f5f5f5 !important;
+    }
+
+    &.Mui-selected {
+      background-color: #e0e0e0 !important;
+    }
+  }
+}
