@@ -1,13 +1,11 @@
 import Header from "./components/Header/Header";
-
-import { useTheme } from "./hooks/use-theme";
+import Navbar from "./components/Filters/Filters";
 
 function App() {
-  const [theme, setTheme] = useTheme();
-
   return (
     <>
       <Header />
+      <Navbar />
     </>
   );
 }
