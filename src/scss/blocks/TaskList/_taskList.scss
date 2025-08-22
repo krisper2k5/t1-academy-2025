@@ -1,0 +1,26 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid var(--border-color);
+  margin-top: 70px;
+  border-radius: 5px;
+  margin-left: 100px;
+  min-height: 200px;
+
+  &:hover {
+    border-color: #000000;
+  }
+
+  .title {
+    padding: 15px 25px;
+    // width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+  .context {
+    padding: 0 25px;
+  }
+}

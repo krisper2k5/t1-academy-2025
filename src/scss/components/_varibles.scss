@@ -22,6 +22,8 @@
   --filterBorder-color-white: #ffffff;
 
   --font-familly-base: "Mozilla Headline", sans-serif;
+  --border-color: #e0e0e0;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 [data-theme="light"] {
@@ -48,4 +50,15 @@
   --addButton-background-color: var(--addButton-background-white);
   --addButton-color: var(--addButton-color-black);
   --filterBoeder-color: var(--filterBorder-color-white);
+}
+
+[data-theme] {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+// Для всех элементов, которые меняют цвет
+* {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out, fill 0.5s ease-in-out,
+    stroke 0.5s ease-in-out;
 }
