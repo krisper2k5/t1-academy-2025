@@ -4,8 +4,13 @@ type Theme = "dark" | "light";
 
 export const useTheme = (): [Theme, (theme: Theme) => void] => {
   const [theme, setTheme] = useState<Theme>(() => {
+    const isDarkTheme = window?.matchMedia(
+      "(prefers-color-scheme: dark )"
+    ).matches;
+    const defaultTheme = isDarkTheme ? "dark" : "light";
+    console.log("console-theme", defaultTheme);
     const savedData = localStorage.getItem("app-theme") as Theme;
-    return savedData || "light";
+    return savedData || defaultTheme;
   });
 
   useLayoutEffect(() => {
