@@ -7,19 +7,22 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 
+import Header from "../Header/Header";
+import TaskList from "../TaskList/TaskList";
+
 function Filters() {
+  const status = [
+    { label: "To Do", id: 1 },
+    { label: "In Progress", id: 2 },
+    { label: "Done", id: 3 },
+  ];
+
   const categories = [
     { label: "Bug", id: 1 },
     { label: "Feature", id: 2 },
     { label: "Documentation", id: 3 },
     { label: "Refactor", id: 4 },
     { label: "Test", id: 5 },
-  ];
-
-  const status = [
-    { label: "To Do", id: 1 },
-    { label: "In Progress", id: 2 },
-    { label: "Done", id: 3 },
   ];
 
   const priority = [
@@ -30,6 +33,7 @@ function Filters() {
 
   return (
     <>
+      <Header />
       <div className="filtersContainer">
         <Paper component="form" className="searchPaper">
           <IconButton type="button" className="SearchIcon" aria-label="search">
@@ -44,19 +48,19 @@ function Filters() {
 
         <Autocomplete
           disablePortal
-          options={categories}
+          options={status}
           className="autocomplete"
           renderInput={(params) => (
-            <TextField {...params} label="Categories" className="textField" />
+            <TextField {...params} label="Status" className="textField" />
           )}
         />
 
         <Autocomplete
           disablePortal
-          options={status}
+          options={categories}
           className="autocomplete"
           renderInput={(params) => (
-            <TextField {...params} label="Status" className="textField" />
+            <TextField {...params} label="Categories" className="textField" />
           )}
         />
 
@@ -69,6 +73,7 @@ function Filters() {
           )}
         />
       </div>
+
       <Button
         variant="contained"
         startIcon={<AddIcon />}
@@ -76,6 +81,8 @@ function Filters() {
       >
         <div className="newTaskButton-text">New Task</div>
       </Button>
+
+      <TaskList />
     </>
   );
 }
