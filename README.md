@@ -7,4 +7,6 @@
 - Сборщик проекта : Vite
 - UI-фреймворк : Material UI
 
+- State-manager: Zustand(эксперимент)
+
 запуск: (npm run dev)

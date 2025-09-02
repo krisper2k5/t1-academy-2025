@@ -14,6 +14,11 @@ function TaskList() {
           <p className="status"></p>
           <p className="priority"></p>
         </div>
+        <div className="date"></div>
+        <div className="changing">
+          <div className="edit"></div>
+          <div className="delete"></div>
+        </div>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { useTheme } from "../../hooks/use-theme";
+import { useNavigate } from "react-router";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -68,6 +69,12 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 export default function CustomizedSwitches() {
   const [theme, setTheme] = useTheme();
 
+  const navigate = useNavigate();
+
+  const backTitle = () => {
+    navigate("/");
+  };
+
   type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
   const handleThemeChange = (e: ChangeEvent) =>
@@ -75,7 +82,9 @@ export default function CustomizedSwitches() {
 
   return (
     <div className="header">
-      <div className="title">Listy</div>
+      <div className="title" onClick={backTitle}>
+        Listy
+      </div>
       <FormControlLabel
         control={
           <MaterialUISwitch

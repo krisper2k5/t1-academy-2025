@@ -1,0 +1,237 @@
+.task-item-container {
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--main-background-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 445px) {
+    padding: 12px;
+  }
+}
+
+.task-item-paper {
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--filterBorder-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--form-background-color) !important;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
+
+  @media (max-width: 445px) {
+    padding: 16px;
+  }
+}
+
+.task-item-title {
+  margin-bottom: 24px !important;
+  color: var(--form-text-color);
+  text-align: center;
+  font-weight: 600 !important;
+  font-family: var(--font-familly-base);
+
+  @media (max-width: 768px) {
+    font-size: 28px !important;
+    margin-bottom: 20px !important;
+  }
+
+  @media (max-width: 445px) {
+    font-size: 24px !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+.task-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-item-field {
+  .MuiInputLabel-root {
+    color: var(--main-text-color);
+    font-family: var(--font-familly-base);
+  }
+  .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: var(--main-text-color);
+    font-family: var(--font-familly-base);
+  }
+
+  .MuiOutlinedInput-root {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    font-family: var(--font-familly-base);
+
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: var(--filterBorder-color);
+      border-width: 2px;
+    }
+
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: var(--filterBorder-color);
+      border-width: 2px;
+    }
+  }
+
+  .MuiInputBase-input {
+    color: var(--main-text-color);
+    font-family: var(--font-familly-base);
+  }
+
+  .MuiSelect-icon {
+    color: var(--main-text-color);
+  }
+}
+
+.task-item-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: flex-end;
+
+  @media (max-width: 445px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.task-item-button-save {
+  background-color: var(--addButton-background-color) !important;
+  color: var(--addButton-color) !important;
+  padding: 12px 32px !important;
+  font-weight: 600 !important;
+  font-family: var(--font-familly-base) !important;
+  text-transform: none !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--filterBorder-color) !important;
+
+  &:hover {
+    background-color: var(--addButton-background-color) !important;
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 445px) {
+    width: 100%;
+    padding: 12px 24px !important;
+  }
+}
+
+.task-item-button-cancel {
+  border-color: var(--filterBorder-color) !important;
+  color: var(--main-text-color) !important;
+  padding: 12px 32px !important;
+  font-weight: 600 !important;
+  font-family: var(--font-familly-base) !important;
+  text-transform: none !important;
+  border-radius: 6px !important;
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: var(--filterBorder-color) !important;
+    color: var(--main-background-color) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 445px) {
+    width: 100%;
+    padding: 12px 24px !important;
+  }
+}
+
+.MuiMenu-paper {
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+  border: 1px solid var(--filterBorder-color) !important;
+}
+
+.MuiMenuItem-root {
+  font-family: var(--font-familly-base) !important;
+  color: var(--main-text-color) !important;
+
+  &:hover {
+    background-color: var(--filterBorder-color) !important;
+    color: var(--main-background-color) !important;
+  }
+
+  &.Mui-selected {
+    background-color: var(--addButton-background-color) !important;
+    color: var(--addButton-color) !important;
+  }
+}
+
+.task-item-paper {
+  animation: fadeInUp 0.5s ease-out;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.task-item-form {
+  animation: slideIn 0.4s ease-out 0.2s both;
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .task-item-paper {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .task-item-button-save:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  }
+
+  .task-item-button-cancel:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.task-item-container,
+.task-item-paper,
+.task-item-title,
+.task-item-field,
+.task-item-button-save,
+.task-item-button-cancel {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.css-1gtchvp-MuiPaper-root {
+}

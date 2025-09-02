@@ -7,10 +7,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
 import TaskList from "../TaskList/TaskList";
+import { useNavigate } from "react-router";
 
 function Filters() {
+  const navigate = useNavigate();
+
   const status = [
     { label: "To Do", id: 1 },
     { label: "In Progress", id: 2 },
@@ -31,9 +34,13 @@ function Filters() {
     { label: "High", id: 3 },
   ];
 
+  const handleAddTask = () => {
+    navigate("/add-task");
+  };
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="filtersContainer">
         <Paper component="form" className="searchPaper">
           <IconButton type="button" className="SearchIcon" aria-label="search">
@@ -78,6 +85,7 @@ function Filters() {
         variant="contained"
         startIcon={<AddIcon />}
         className="newTaskButton"
+        onClick={handleAddTask}
       >
         <div className="newTaskButton-text">New Task</div>
       </Button>

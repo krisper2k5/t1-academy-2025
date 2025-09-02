@@ -8,7 +8,6 @@ export const useTheme = (): [Theme, (theme: Theme) => void] => {
       "(prefers-color-scheme: dark )"
     ).matches;
     const defaultTheme = isDarkTheme ? "dark" : "light";
-    console.log("console-theme", defaultTheme);
     const savedData = localStorage.getItem("app-theme") as Theme;
     return savedData || defaultTheme;
   });

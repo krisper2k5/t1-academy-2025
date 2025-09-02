@@ -9,6 +9,8 @@
   --addButton-background-black: #000000;
   --addButton-color-black: #000000;
   --filterBorder-color-black: #000000;
+  --form-text-black: #000000;
+  --form-background-black: #292828;
 
   --main-background-white: #ffffff;
   --main-text-white: #ffffff;
@@ -20,6 +22,8 @@
   --addButton-background-white: #ffffff;
   --addButton-color-white: #ffffff;
   --filterBorder-color-white: #ffffff;
+  --form-text-white: #ffffff;
+  --form-background-white: #ffffff;
 
   --font-familly-base: "Mozilla Headline", sans-serif;
   --border-color: #e0e0e0;
@@ -36,7 +40,9 @@
   // --textField-color: var(--textField-color-white);
   --addButton-background-color: var(--addButton-background-black);
   --addButton-color: var(--addButton-color-white);
-  --filterBoeder-color: var(--filterBorder-color-black);
+  --filterBorder-color: var(--filterBorder-color-black);
+  --form-text-color: var(--form-text-black);
+  --form-background-color: var(--form-background-white);
 }
 
 [data-theme="dark"] {
@@ -49,7 +55,9 @@
   --textField-color: var(--textField-color-black);
   --addButton-background-color: var(--addButton-background-white);
   --addButton-color: var(--addButton-color-black);
-  --filterBoeder-color: var(--filterBorder-color-white);
+  --filterBorder-color: var(--filterBorder-color-white);
+  --form-text-color: var(--form-text-white);
+  --form-background-color: var(--form-background-black);
 }
 
 [data-theme] {
@@ -61,4 +69,16 @@
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
     border-color 0.5s ease-in-out, fill 0.5s ease-in-out,
     stroke 0.5s ease-in-out;
+}
+
+.MuiSwitch-root {
+  transition: all 0.5s ease-in-out !important;
+}
+
+.MuiSwitch-track {
+  transition: background-color 0.5s ease-in-out !important;
+}
+
+.MuiSwitch-thumb {
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out !important;
 }
